@@ -28,9 +28,18 @@ h2{
 }
 
 footer{
-  height: 2rem;
+  height: 7rem;
   width: 100%;
   background-color: #008000;
   color: #fff;
   text-align: center;
+}
+footer h2{
+  color: #fff;
+}
+footer ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
