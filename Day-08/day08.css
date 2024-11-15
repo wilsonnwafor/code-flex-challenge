@@ -1,0 +1,23 @@
+div{
+  width: 400px;
+  height: 50px;
+  border: .2rem solid black;
+  display: grid;
+  place-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f2f3f5;
+}
+
+p{
+  padding: 1rem;
+  border: .2rem dotted black;
+  background-color: #f2f3f5;
+}
+img{
+  width: 300px;
+  height: 200px;
+  margin: 2rem;
+  padding: .1rem;
+  border: .5rem solid black;
+  box-shadow: .1rem .1rem 1rem ;
+}
