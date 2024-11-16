@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header{
+  height: 6rem;
+  background-color: #3346f5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+header ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+header .fa-bars{
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header ul{
+    display: none;
+  }
+  header .fa-bars{
+    font-size: 2rem;
+    display: block;
+  }
+}
