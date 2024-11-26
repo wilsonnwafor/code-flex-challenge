@@ -16,6 +16,16 @@ body{
   height: 5rem;
   background-color: #333;
   border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#theme-btn{
+  font-size: 1.3rem;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
 }
 .header ul{
   list-style: none;
