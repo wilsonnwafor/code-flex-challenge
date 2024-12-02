@@ -1,3 +1,20 @@
+:root {
+  --bg-color: #e0e0e0;
+  --text-color: #333;
+  --header-bg: #333;
+  --header-text: #fff;
+  --filter-bg: #947e7e;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --header-bg: #2d2d2d;
+  --header-text: #fff;
+  --filter-bg: #4a4a4a;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -9,12 +26,14 @@ body{
   place-items: center;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #e0e0e0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 .header{
   width: 40%;
   height: 5rem;
-  background-color: #333;
+  background-color: var(--header-bg);
   border-radius: 2rem;
   display: flex;
   align-items: center;
@@ -37,12 +56,12 @@ body{
 }
 .header ul li a{
   text-decoration: none;
-  color: #fff;
+  color: var(--header-text);
   padding: 1rem 2rem;
   border-radius: 1.5rem;
 }
 .header ul li a.active{
-  background-color: #947e7e;
+  background-color: var(--filter-bg);
 }
 
 .hero{
@@ -76,10 +95,10 @@ main{
 
 .filters li a{
   text-decoration: none;
-  color: #fff;
+  color: var(--header-text);
   padding: .5rem 1rem;
   border-radius: 1.5rem;
-  background-color: #947e7e;
+  background-color: var(--filter-bg);
 }
 .images{
   width: 80%;
