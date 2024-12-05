@@ -35,6 +35,10 @@
   }
   .app .list li{
     margin: 0;
+    border: .2rem solid #f0f0f0;
+    border-radius: .4rem;
+    overflow: hidden;
+    padding-left: .2rem;
   }
   .app .list li p{
     text-wrap: nowrap;
