@@ -30,6 +30,9 @@
   .app .input button{
     text-wrap: nowrap;
   }
+  .app .list{
+    width: 100%;
+  }
 }
 .app .input{
   border: .2rem solid #f0f0f0;
