@@ -36,6 +36,10 @@
   .app .list li{
     margin: 0;
   }
+  .app .list li p{
+    text-wrap: nowrap;
+    font-size: .8rem;
+  }
 }
 .app .input{
   border: .2rem solid #f0f0f0;
@@ -89,6 +93,7 @@
   color: #ff0000;
   list-style: disc;
 }
+
 .app .list li p.completed{
   text-decoration: line-through;
   opacity: 0.7;
