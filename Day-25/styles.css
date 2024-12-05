@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  display: grid;
+  place-items: center;
+}
+.app{
+  background-color: #fff;
+  height: auto;
+  width: 40%;
+  padding: 2rem;
+  border-radius: .5rem;
+  box-shadow: .1rem .1rem .5rem #0000003a;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  transition: all .3s linear;
+}
+.app .input{
+  border: .2rem solid #f0f0f0;
+  border-radius: .4rem;
+  overflow: hidden;
+}
+.app .input input{
+  border: 0;
+  outline: 0;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0 .5rem;
+}
+.app .input button{
+  border: 0;
+  outline: 0;
+  background-color: #0aad0a;
+  color: #fff;
+  padding: .8rem 1.2rem;
+  cursor: pointer;
+}
+.app .input button:active{
+  background-color: #01ff01;
+}
+.app .list{
+  list-style: circle;
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+.app .list li{
+  font-size: 1.2rem;
+  margin: .2rem .5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app .list li button{
+  border: 0;
+  outline: 0;
+  background-color: #ff0000;
+  color: #fff;
+  padding: .8rem 1.2rem;
+  cursor: pointer;
+  border-radius: .4rem;
+}
+.app .list li:active{
+  color: #ff0000;
+  list-style: disc;
+}
+.app .list li p.completed{
+  text-decoration: line-through;
+  opacity: 0.7;
+}
