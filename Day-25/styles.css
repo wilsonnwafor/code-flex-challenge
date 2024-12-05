@@ -25,13 +25,17 @@
 }
 @media (max-width:600px) {
   .app{
-    width: 80%;
+    width: 90%;
+  }
+  .app .input button{
+    text-wrap: nowrap;
   }
 }
 .app .input{
   border: .2rem solid #f0f0f0;
   border-radius: .4rem;
   overflow: hidden;
+  display: flex;
 }
 .app .input input{
   border: 0;
