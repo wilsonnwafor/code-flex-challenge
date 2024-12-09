@@ -113,11 +113,28 @@ main{
   display: grid;
   place-items: center;
   gap: 2rem;
+  overflow: hidden;
 }
 .hero{
   height: 80vh;
   width: 100%;
   padding: 0 5rem;
+  position: relative;
+  z-index: 2;
+}
+.hero .overlay video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  z-index: -1;
 }
 .hero .text{
   align-content: center;
@@ -234,32 +251,18 @@ main{
   box-shadow: .1rem .1rem 1rem rgba(66, 65, 65, 0.25);
   text-align: center;
 }
-.services .grid-container .item:nth-child(2){
-  opacity: 0.5;
-  position: relative;
-  cursor: not-allowed;
-}
 
-.services .grid-container .item:nth-child(2)::after{
-  content: "*unavailable*";
-  position: absolute;
-  top: 0%;
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
-  font-style: italic;
-  z-index: 0;
-}
-.services .grid-container .item .fa-code,
-.services .grid-container .item .fa-database,
-.services .grid-container .item .fa-python,
-.services .grid-container .item .fa-user-group{
+.services .grid-container .item .fa-cart-shopping,
+.services .grid-container .item .fa-suitcase,
+.services .grid-container .item .fa-computer,
+.services .grid-container .item .fa-blog{
   font-size: 2rem;
   color: var(--accent-color);
 }
 .services .grid-container .item h2{
   font-size: 1.5rem;
   color: var(--theme-color);
+  margin: 0;
 }
 .services .grid-container .item a{
   color: var(--theme-color);
@@ -409,7 +412,7 @@ main{
   height: 100%;
   width: 70%;
   border: .5rem solid var(--accent-color);
-  border-radius: 71% 29% 68% 32% / 31% 71% 29% 69% ;
+  border-radius: 56% 44% 71% 29% / 44% 56% 44% 56% ;
   overflow: hidden;
 }
 .about .about-wrapper .image .img-wrapper img{
@@ -438,18 +441,23 @@ main{
     font-size: .8rem;
   }
 }
-.about .socials{
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  border-top: .2rem solid var(--theme-color);
-  width: fit-content;
-  padding: 1rem 0;
+.about .experience h2{
+  color: var(--text-dark);
+  border-bottom:.2rem solid var(--theme-color);
+  width: 80%;
+  text-align: left;
 }
-.about .socials li a{
+.about .experience .experience-wrapper{
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  padding: 1rem 0;
+  text-align: left;
+  text-wrap: nowrap;
+}
+.about .experience-wrapper div i{
   text-decoration: none;
-  color: var(--text-light);
+  color: var(--accent-color);
 }
 .contact{
   height: 80vh;
@@ -530,6 +538,16 @@ main{
 }
 .contact form div button:hover{
   background-color: #f0cb5b;
+}
+.contact form .socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact form .socials li a{
+  text-decoration: none;
+  color: var(--text-dark);
 }
 footer{
   padding: 1.5rem;

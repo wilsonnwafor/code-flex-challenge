@@ -43,4 +43,28 @@ form.addEventListener('submit', (e)=>{
     return;
   } 
   console.log("submitted");
+  const formData = new FormData(form);
+
+  fetch('https://formspree.io/f/xdkovgrz', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      Accept: 'application/json',
+    },
+  })
+  .then((response) => {
+    if (response.ok) {
+      err.style.color = 'green';
+      err.textContent = 'Message sent successfully!';
+      form.reset(); // Clear form fields after submission
+    } else {
+      throw new Error('Failed to send message.');
+    }
+  })
+  .catch((error) => {
+    err.style.color = 'red';
+    err.textContent = 'Something went wrong. Please try again.';
+    console.error(error);
+  });
+  
 });
