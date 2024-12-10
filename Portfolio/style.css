@@ -15,7 +15,10 @@
   box-sizing: border-box;
   font-family: sans-serif;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
+
+
 body{
   background-color: var(--bg-black);
   padding: 1.5rem;
@@ -29,9 +32,8 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  box-shadow: .1rem .1rem .5rem #252530;
   position: sticky;
-  top: 1.5rem;
+  top: 0;
   z-index: 10;
 }
 .header .logo{
@@ -110,10 +112,6 @@ body{
 main{
   background-color: var(--bg-theme-dark);
   color: var(--text-light);
-  display: grid;
-  place-items: center;
-  gap: 2rem;
-  overflow: hidden;
 }
 .hero{
   height: 80vh;
@@ -175,7 +173,7 @@ main{
 }
 @media (max-width: 600px) {
   .hero .text{
-    font-size: .5rem;
+    font-size: .4rem;
     line-height: 1rem;
   }
 }
@@ -286,11 +284,11 @@ main{
     font-size: .8rem;
   }
   .services .grid-container .item a{
-    font-size: .6rem;
+    font-size: 1rem;
     padding: .8rem;
   }
   .services .grid-container .item a:after{
-    font-size: .6rem;
+    font-size: 1rem;
   }
   .services .grid-container .item{
     gap: 0;
@@ -420,6 +418,27 @@ main{
   height: 100%;
   object-fit: cover;
 }
+
+.about .experience h2{
+  color: var(--text-dark);
+  border-bottom:.2rem solid var(--theme-color);
+  width: 80%;
+  text-align: left;
+}
+.about .experience .experience-wrapper{
+  /* display: flex;
+  align-items: start; */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  padding: 1rem 0;
+  text-align: left;
+  text-wrap: nowrap;
+}
+.about .experience-wrapper div i{
+  text-decoration: none;
+  color: var(--accent-color);
+}
 @media (max-width: 900px) {
   .about .about-wrapper{
     width: 100%;
@@ -440,24 +459,12 @@ main{
     line-height: 1.5rem;
     font-size: .8rem;
   }
-}
-.about .experience h2{
-  color: var(--text-dark);
-  border-bottom:.2rem solid var(--theme-color);
-  width: 80%;
-  text-align: left;
-}
-.about .experience .experience-wrapper{
-  display: flex;
-  align-items: start;
-  gap: 2rem;
-  padding: 1rem 0;
-  text-align: left;
-  text-wrap: nowrap;
-}
-.about .experience-wrapper div i{
-  text-decoration: none;
-  color: var(--accent-color);
+  .about .experience{
+    width: 100%;
+  }
+  .about .experience .experience-wrapper{
+    grid-template-columns: auto;
+  }
 }
 .contact{
   height: 80vh;
@@ -560,6 +567,28 @@ footer{
 footer p{
   font-size: .8rem;
 }
+@media (max-width:900px){
+  .contact form .message{
+    height: 10rem;
+    font-size: .6rem;
+  }
+  
+  .contact form div i,
+  .contact form div span{
+    height: 100%;
+    padding: .8rem;
+    align-items: center;
+    align-content: center;
+    font-size: .6rem;
+  }
+  .contact form .message i{
+    align-content: start;
+  }
+  .contact form div button{
+    padding: .8rem 1rem;
+    font-size: .6rem;
+  }
+}
 @media (max-width:600px) {
   .contact{
     padding: 0 1rem;
@@ -582,6 +611,10 @@ footer p{
     padding: .8rem;
     align-items: center;
     align-content: center;
+  }
+  .contact form .message{
+    height: 5rem;
+    font-size: .6rem;
   }
   .contact form .message i{
     align-content: start;
