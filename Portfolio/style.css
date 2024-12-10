@@ -172,9 +172,9 @@ main{
   background-color: #33333a;
 }
 @media (max-width: 600px) {
-  .hero .text{
-    font-size: .4rem;
-    line-height: 1rem;
+  .hero .text h1{
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 @media (max-width: 900px) {
@@ -568,6 +568,13 @@ footer p{
   font-size: .8rem;
 }
 @media (max-width:900px){
+  .contact{
+    height: auto;
+  }
+  .contact form{
+    width: 90%;
+    height: 100%;
+  }
   .contact form .message{
     height: 10rem;
     font-size: .6rem;
@@ -591,6 +598,7 @@ footer p{
 }
 @media (max-width:600px) {
   .contact{
+    height: 80vh;
     padding: 0 1rem;
   }
   .contact h2{
@@ -598,7 +606,7 @@ footer p{
   }
   .contact form{
     width: 100%;
-    height: 80%;
+    height: 50%;
     padding: .8rem;
   }
   .contact form div:not(.message){
